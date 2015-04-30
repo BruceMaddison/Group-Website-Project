@@ -1,0 +1,242 @@
+html {
+	font-family: Arial;
+    text-align: left;
+    margin: 0px, auto;
+}
+
+body {
+	background-image: url(TsvMusicBG.png);
+	background-attachment: fixed;
+	background-repeat: repeat-x;
+}
+
+#Container {
+	margin: -20px 0px 0px 80px;
+	width: 1180px;
+	height: 600px;
+	background-color: clear;
+}
+
+#Header {
+	height: 98px;
+	width: 1180px;
+	float: left;
+	background-image: url(HeaderBG.png);
+	border: solid; 5px; #4C668C;
+	border-radius: 0px 0px 10px 10px;
+	-moz-box-shadow: 2px 2px 5px 6px #000;
+ 	-webkit-box-shadow: 2px 0px 5px 0px #000;
+     box-shadow: 2px 0px 5px 0px #000;
+}
+
+#Logo {
+	height: 98px;
+	width: 147px;
+	background-image: url(Logo.jpg);
+	float: left;
+}
+
+#Title {
+	height: 60px;
+	width: 550px;
+	float: left;
+	margin: 19px 0px 0px 235px;
+	background-image: url(Title.png);
+}
+
+#Nav {
+	margin: 10px 0px 0px 0px;
+	height: 30px;
+	width: 1180px;
+	float: left;
+	background-color: #4C668C;
+	border: solid 2px #4C668C;
+	border-radius: 5px;
+	-moz-box-shadow: 2px 2px 5px 6px #000;
+ 	-webkit-box-shadow: 2px 0px 5px 0px #000;
+     box-shadow: 2px 0px 5px 0px #000;
+}
+
+#nav-wrapper {
+	width: 1180px;
+	height: 30px;
+	margin:0 auto;
+	background: clear;
+}
+
+ul#nav {
+	font-family: Arial;
+	font-size:14px;
+	list-style:none;
+	margin:0 auto;
+	padding:0;
+	width: 1180px;
+	overflow: auto;
+}
+
+ul#nav li {
+	display:inline;
+}
+
+ul#nav li a {
+	text-decoration:none;
+	display: block;
+	margin: 0px 0px 0px 9px;
+	padding:5px 57px;
+	background: clear;
+	color:#000;
+	float:left;
+	text-align:center;
+	border-top:2px solid #2C4870;
+	border-right:2px solid #051A38;
+	border-bottom:2px solid #051A38;
+	border-left:2px solid #051A38;
+}
+
+ul#nav li a:hover {
+	background:#3D6F9B;
+	color:#000;
+	border-top:2px solid #051A38;
+	border-right:2px solid #258AA8;
+	border-bottom:2px solid #258AA8;
+	border-left:2px solid #051A38;
+}
+
+#ContentHolder {
+	width: 1140px;
+	height: 570px;
+	margin: 20px;
+	background-color: clear;
+}
+
+#Artist1 {
+	float: left;
+	margin: 20px 0px 0px 20px;
+	width: 1100px;
+	height: 200px;
+	background-color: clear;
+	background-image: url("Content1BG.jpg");
+    background-repeat: repeat-x, y;
+	border-radius: 15px;
+	-moz-box-shadow: 2px 2px 5px 6px #000;
+ 	-webkit-box-shadow: 2px 0px 5px 0px #000;
+     box-shadow: 2px 0px 5px 0px #000;
+}
+
+#ContentArtist {
+	float: left;
+	background-image: url();
+	height: 180px;
+	width: 300px;
+	background-color: rgba(140, 140, 140, 0.5);
+	background-image: url("ArtistIMG.jpg");
+	margin: 10px;
+	border-radius: 10px;
+}
+
+#ContentArtistInfo {
+	float: right;
+	text-align: left;
+	height: 180px;
+	width: 760px;
+	background-color: rgba(140, 140, 140, 0.5);
+	margin: 10px;
+	border-radius: 10px;
+}
+
+#ContentArtistInfoTitle {
+	height: 40px;
+	width: 760px;
+	border-radius: 10px 10px 0px 0px;
+	background-color: rgba(140, 140, 140, 0.5);
+	margin: -40px 0px 0px 0px;
+}
+
+#ContentArtistInfoTitle h3 {
+	font-family: Tahoma;
+	text-align: center;
+}
+
+#ContentArtistInfoContent {
+	font-family: arial;
+	text-align: left;
+}
+
+#Footer {
+	float:left;
+	height: 90px;
+	width: 1200px;
+	background-color: #1B1E22;
+	border-radius: 15px 15px 0px 0px;
+	-moz-box-shadow: 2px 2px 5px 6px #000;
+ 	-webkit-box-shadow: 2px 0px 5px 0px #000;
+     box-shadow: 2px 0px 5px 0px #000;
+}
+
+#FooterFollow {
+	float: left;
+	text-align: center;
+	margin: 10px 10px 0px 10px;
+	height: 80px;
+	width: 300px;
+	background-color: rgba(140, 140, 140, 0.25);
+	border-radius: 15px 0px 0px 0px;
+}
+
+#FooterLinks {
+	float: left;
+	margin: 10px 0px 0px 0px;
+	height: 80px;
+	width: 610px;
+	background-color:  rgba(140, 140, 140, 0.25);
+	text-align: center;
+}
+
+#FooterLinks a {
+	Text-decoration: none;
+    float: left;
+    display: block;
+    height: 0px;
+    width: 100px;
+    margin: 0px 0px 0px 0px;
+    padding: 10px 0px 20px 0px;
+}
+
+#Copy {
+	float: center;
+	margin: 10px 0px 0px 117px;
+	height: 0px;
+	width: 300px;
+}
+
+#Copy a {
+	font-size: 12px;
+    padding: 0 0 0 20px;
+    display: block;
+    text-decoration: none;
+    height: 0px;
+    width: 300px;
+    margin: 0px 0px 0px 14px;
+    padding: 10px 20px 20px 20px;
+    
+}
+
+a {
+	text-decoration: none;
+	color: #CC6;
+	font-family: arial;
+	font-size: 14px;
+}
+
+a:hover {
+	color: #966;
+}
+
+#FooterAdd {
+	float: right;
+	margin: 10px 10px 0px 6px;
+	height: 80px;
+	width: 250px;
+	background-color:  rgba(140, 140, 140, 0.25);
+	border-radius: 0px 15px 0px 0px;
+}
