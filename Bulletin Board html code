@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<div id="container">
+
+	<div id="header">
+    	<div id="logo">
+        </div>
+        <div id="">
+        </div>
+    </div>
+    
+    <div id="nav">
+    	<div id="navcontent">
+    		<ul>
+        		<li><a href="#">Home</a></li>
+           		<li><a href="#">Events</a></li>
+            	<li><a href="#">Bulletin Board</a></li>
+            	<li><a href="#">Musicians</a></li>
+            	<li><a href="#">About Us</a></li>
+    		</ul>
+        </div>
+    </div>
+    
+    	<div id="contentholder">
+    
+    		<div id="bulletinboard">
+            
+            	<div id="bulletinrules">
+                	<div id="welcome">
+                    <h3>Welcome to our Bulletin Board</h3>
+                	<a href="#">click here to see how it works</a>
+                    </div>
+                </div>
+                <div id="bbcontainers">
+                	<h4>Posted 23-March-15</h4>
+                	<div id="bbtitle">
+                    <!--at the top of the div-->
+                    <h2>Volunteer Singers / Musicians</h2>
+                    </div>
+                    
+                    <div id="bbimage">
+                    <!--float left, thinking of taking 100px or so to the right starting from the left away and to be dedicated to the image-->
+                    <!-- img imput through css, same goes for all -->
+                    </div>
+                    
+                    <div id="bbcontent">
+                    <!--float right, beneath the title-->
+                    <p>Our Parish Priest, Fr Mick Peters, is trying to development and foster a community for our 6 PM Vigil Mass at St Josephs on the Strand. </p>
+                    <p>I'm helping by organising an event format, where I invite our members to bring a plate for a buffet and I provide music, or friends who can sing or perform. </p>
+                    <p>Now that we are achieving some success, we need more people who can sing or play music. </p>
+                    <p>I'm open to any kind of singing or performing so long as it is not too controversial. My preference would be for an artist to sing a medley of old time favorites. </p>
+                    <p>Mass starts at 6pm and finishes about 10 to 7. </p>
+                    <p>If you would like to take part, please call Merle Trembath 0418882633 anytime </p>
+                    </div>                   
+                </div>
+                
+                <div id="bbcontainers">
+                	<h4>Posted 21-Mar-15</h4>
+                	<div id="bbtitle">
+                    <h2>TCB logo CALL OUT FOR MUSOS </h2>
+                    </div>
+                    
+                    <div id="bbimage">
+                    </div>
+                    
+                    <div id="bbcontent">
+                    <p>Calling all Musoâ€™s, entertainers, performers. We are looking to book performers/musicians/entertainers for a family friendly festival at the Ingham Tyto Wetlands on the 23rd of May. This inaugural annual event is a family fun day in the parklands and we are looking for appropriate acts. We are looking for a wide variety of bands and entertainers from our local and surrounding areas. </p>
+                    <p>Deadline for initial submissions 29 March 2015. </p>
+                    <p>Artists will need to be insured for public liability. </p>
+                    <p>If you are interested please email details, examples or links to your work and a quote including travel expenses for performing at the event to the Event Stage Manager Emile Griffiths –</p>
+                    </div>
+                    
+                    <div id="bblinks">
+                    <!--these will go at the bottom of the div in each box-->
+                    <a href="mutec.audio@gmail.com">mutec.audio@gmail.com</a><br>
+                    <a href="#">see our Facebook page</a>
+                    </div>
+                </div>
+                
+                <div id="bbcontainers">
+                	<h4>Posted 17-March-15</h4>
+                	<div id="bbtitle">
+                    <h2>Rouvas Academy of Singing</h2>
+                    </div>
+                    
+                    <div id="bbimage">
+                    </div>
+                    
+                    <div id="bbcontent">
+                    <p>I have been in the music industry in Sydney for over 30 years in the capacity of singing teacher, stage performer, singer and musician. My daughter Diana Rouvas was a finalist in the 2012 â€œThe Voiceâ€ television show and she is a testament to what can be achieved with correct vocal training. Allow me to show you her technique and give yourself the opportunity to excel as a vocalist. Skype lessons also available </p>
+                    </div>
+                    
+                    <div id="bblinks">
+                    <a href="rouvasacademyofsinging.com.au">Visit rouvasacademyofsinging.com.au</a>
+                    <p>or phone John 0404 044 823</p>
+                    </div>
+                </div>
+                
+                <div id="bbcontainers">
+                	<h4>Posted 17-March-15</h4>
+                	<div id="bbtitle">
+                    <h2>Would you like to see Metropolitan Opera productions screened in Townsville?</h2>
+                    </div>
+                    
+                    <div id="bbimage">
+                    </div>
+                    
+                    <div id="bbcontent">
+                    <p>The Metropolitan Opera's award-winning series of operas in HD continues featuring ten operas captured live in high definition direct from New York, and screening concurrently with the NY season. </p>
+                    <p>Follow this link for more information: <a href="http://www.sharmillfilms.com.au/?page_id=2195#cinemas">www.sharmillfilms.com.au</a></p>
+                    <p>Event Cinemas are considering bringing the Met Opera HD series to Townsville. If you would like to encourage them to go ahead, please email Alexis at <a href="support@eventcinemas.helpserve.com">support@eventcinemas.helpserve.com</a> with a simple message such as, ‘Please bring Met Opera to Townsville’. You may of course add additional comments if you wish. </p>
+                    <p>Should you decide to contact Alexis, the Music Centre would appreciate receiving a copy of your email, as it will help us assess the level of support from the Townsville arts community. Please copy your email to <a href="admin@townsvillemusic.org.au">admin@townsvillemusic.org.au</a></p>
+                    <p>We invite you to forward this message to others who may be interested</p>
+                    </div>
+                </div>
+                
+                <div id="bbcontainers">
+                	<h4>Posted 16-March-15</h4>
+                	<div id="bbtitle">
+                    <h2>Office Administrator required!</h2>
+                    </div>
+                    
+                    <div id="bbcontent">
+                    <p>The Townsville Community Music Centre is getting busier all the time, and we need a part-time Office Administrator. </p>
+                    <p>This is a long-term, part time, part-paid position (all conditions are negotiable). </p>
+                    <p>Experience with not-for profit organisations would be an advantage. </p>
+                    <p>We use MYOB and Microsoft Office, mostly Word and Excel. </p>
+                    </div>
+                    
+                    <div id="bblinks">
+                    <p>For more information -</p>
+                    <a href="admin@townsvillemusic.org.au">Email Us</a>
+                    <p>or phone Jeff 4724 2086</p>
+                    </div>
+                </div>
+                
+                <div id="bbcontainers">
+                	<h4>Posted 15-March-15</h4>
+                	<div id="bbtitle">
+                    <h2>Dear fellow musos</h2>
+                    </div>
+                    
+                    <div id="bbcontent">
+                    <p>I sing and play keyboard (when I have one). </p>
+                    <p>Blues/jazz songs mostly.</p>
+                    </div>
+                    
+                    <div id="bblinks">
+                    <a href="knowles_ada@yahoo.com.au">knowles_ada@yahoo.com.au</a>
+                    </div>
+                </div>
+                
+                <div id="bbcontainers">
+                	<h4>Posted 09-March-15</h4>
+                	<div id="bbtitle">
+                    <h2>Music teaching by Effortless Technique </h2>
+                    </div>
+                    
+                    <div id="bbimage">
+                     </div>
+                    
+                    <div id="bbcontent">
+                    <p>Are you struggling to master sections of your pieces at tempo? Are you stressing that you wonâ€™t be prepared because you donâ€™t have enough time to practice? Would you like to learn efficient and effective practice skills and strategies to help you play those difficult sections with confidence and ease and to the best of your ability? </p>
+                    </div>
+                    
+                    <div id="bblinks">
+                    <a href="#">Visit us on Facebook</a><br>
+                    <a href="effortlesstechnique@gmail.com">Email Cassandra Fixter</a>
+                    <p>or phone 0423 626 501</p>
+                    </div>
+                </div>
+                            
+    		</div>
+                
+        </div>
+        
+   			<div id="footer">
+    			<div id="footerinfor">
+        		</div>
+    		</div>
+</div>
+</body>
+</html>
