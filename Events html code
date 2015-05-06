@@ -1,0 +1,224 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<div id="container">
+
+	<div id="header">
+    	<div id="logo">
+        </div>
+        <div id="">
+        </div>
+    </div>
+    
+    <div id="nav">
+    	<div id="navcontent">
+    		<ul>
+        		<li><a href="#">Home</a></li>
+           		<li><a href="#">Events</a></li>
+            	<li><a href="#">Bulletin Board</a></li>
+            	<li><a href="#">Musicians</a></li>
+            	<li><a href="#">About Us</a></li>
+    		</ul>
+        </div>
+    </div>
+    
+    	<div id="contentholder">
+    
+    		<div id="Eventcontainers">
+                	<div id="bbtitle">
+                    <h2>Sunday Variety Concert</h2>
+                    </div>
+                    
+                    <div id="Eventimage">
+                    </div>
+                    
+                    <div id="Eventcontent">
+                    <p>Presented by Friends of the Theatre </p>
+                    <p>2pm Sunday 26 April at Pimlico Performing Arts Centre </p>
+                    <p>Fulham Road </p>
+                    </div>
+                    
+                    <div id="Eventlinks">
+                    <p>Enquiries - please phone 4723 7879</p>
+                    </div>
+                </div>
+                
+        </div>
+        
+        <div id="contentholder">
+    
+    		<div id="Eventcontainers">
+                	<div id="bbtitle">
+                    <h2>Harbourside Duo</h2>
+                    </div>
+                    
+                    <div id="Eventimage">
+                    </div>
+                    
+                    <div id="Eventcontent">
+                    <p>Presents</p>
+                    <p><strong>Dream Serenade.</strong></p>
+                    <p>Music of Debussy, Ravel, Saint- Saens, Sibelius and others. </p>
+                    <p>March into Sommarhagen! </p>
+                    <p>Dance the Habanera </p>
+                    <p>Meet the Girl with Flaxen Hair! </p>
+                    <p>Be seduced by Thais! </p>
+                    <p>Or just relax and let the music wash over you.</p>
+                    </div>
+                    
+                    <div id="Eventlinks">
+                    <p>2pm Sunday 17 May at C2 (Townsville Civic Theatre)</p>
+                    </div>
+                </div>
+                
+        </div>
+        
+        <div id="contentholder">
+    
+    		<div id="Eventcontainers">
+                	<div id="bbtitle">
+                    <h2>Aviva String Quartet</h2>
+                    </div>
+                    
+                    <div id="Eventimage">
+                    </div>
+                    
+                    <div id="Eventcontent">
+                    <p>Following the phenomenal success of their 2014 season, the superb foursome return with their first concert for 2015, bringing their signature style of classical and modern music to the masses in their own fresh and entertaining style.</p>
+                    <p>Featuring</p>
+                    <p>Caroline Lloyd-Doolan on violin</p>
+                    <p>Susan Fraser on violin </p>
+                    <p>Jessica Winton on viola </p>
+                    <p>Ivy Wu on cello </p>
+                    </div>
+                    
+                    <div id="Eventlinks">
+                    <p>Ticketshop link	2pm Sunday 14 June at C2 (CivicTheatre building) </p>
+                    <p>$25 Adult - $20 Concession - Children 12 and under free!</p>
+                    </div>
+                </div>
+                
+        </div>
+        
+        <div id="contentholder">
+    
+    		<div id="Eventcontainers">
+                	<div id="bbtitle">
+                    <h2>Townsville Concert Band</h2>
+                    </div>
+                    
+                    <div id="Eventimage">
+                    </div>
+                    
+                    <div id="Eventcontent">
+                    <!--no content-->
+                    </div>
+                    
+                    <div id="Eventlinks">
+                    <p>2pm Sunday 28 June at C2 (Townsville Civic Theatre)</p>
+                    </div>
+                </div>
+                
+        </div>
+        
+        <div id="contentholder">
+    
+    		<div id="Eventcontainers">
+                	<div id="bbtitle">
+                    <h2>Voices of Pimlico </h2>
+                    </div>
+                    
+                    <div id="Eventimage">
+                    </div>
+                    
+                    <div id="Eventcontent">
+                    <!--no content-->
+                    </div>
+                    
+                    <div id="Eventlinks">
+                    <p>2pm Sunday 6 September at C2 (Townsville Civic Theatre)</p>
+                    </div>
+                </div>
+                
+        </div>
+        
+        <div id="contentholder">
+    
+    		<div id="Eventcontainers">
+                	<div id="bbtitle">
+                    <h2>Townsville Concert Band </h2>
+                    </div>
+                    
+                    <div id="Eventimage">
+                    </div>
+                    
+                    <div id="Eventcontent">
+                    <!--no content-->
+                    </div>
+                    
+                    <div id="Eventlinks">
+                    <p>2pm Sunday 28 June at C2 (Townsville Civic Theatre)</p>
+                    </div>
+                </div>
+                
+        </div>
+        
+        <div id="contentholder">
+    
+    		<div id="Eventcontainers">
+                	<div id="bbtitle">
+                    <h2>Allegro Choir</h2>
+                    </div>
+                    
+                    <div id="Eventimage">
+                    </div>
+                    
+                    <div id="Eventcontent">
+                    <!--no content-->
+                    </div>
+                    
+                    <div id="Eventlinks">
+                    <p>2pm Sunday 22 November at C2 (Townsville Civic Theatre)</p>
+                    </div>
+                </div>
+                
+        </div>
+        
+        <div id="contentholder">
+    
+    		<div id="Eventcontainers">
+                	<div id="bbtitle">
+                    <h2>Aviva String Quartet </h2>
+                    </div>
+                    
+                    <div id="Eventimage">
+                    </div>
+                    
+                    <div id="Eventcontent">
+                    <p>The superb foursome return with their final concert for 2015, bringing their signature style of classical and modern music to the masses in their own fresh and entertaining style. </p>
+                    <p>Featuring</p>
+                    <p>Caroline Lloyd-Doolan on violin </p>
+                    <p>Susan Fraser on violin </p>
+                    <p>Jessica Winton on viola </p>
+                    <p>Ivy Wu on cello </p>
+                    </div>
+                    
+                    <div id="Eventlinks">
+                    <p>2pm Sunday 29 November at C2 (Townsville Civic Theatre)</p>
+                    </div>
+                </div>
+                
+        </div>
+               
+   			<div id="footer">
+    			<div id="footerinfor">
+        		</div>
+    		</div>
+</div>
+</body>
+</html>
