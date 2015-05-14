@@ -1,8 +1,8 @@
 @charset "UTF-8";
 div.container{
-    width: 1000px;
-    margin: auto;
-    background-color: rgba(255, 255, 255, 0.5);
+	width: 1000px;
+	margin: auto;
+	background-color: rgba(255, 255, 255, 0.5);
 }
 body{
     text-align: center;
@@ -12,7 +12,8 @@ body{
     background-size: 100%;
 }
 header{
-    border: thin solid black;
-    background-color: rgba(0, 118, 163, 0.5);
+	border: thin solid black;
+	background-color: rgba(0, 118, 163, 0.5);
+	/* [disabled]text-align: left; */
+	text-indent: 12px;
 }
-nav
