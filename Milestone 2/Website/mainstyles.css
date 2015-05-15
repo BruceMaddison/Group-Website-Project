@@ -52,7 +52,8 @@ footer .councilimgindex {
 header .logotitle {
 	float: right;
 	padding-right: 12px;
-    padding-top: 20px;
+	padding-top: 20px;
+	margin-top: -13px;
 }
 header .navfblike {
 	float: right;
@@ -104,4 +105,8 @@ nav ul li a:hover{
 	border-right:2px solid #258AA8;
 	border-bottom:2px solid #258AA8;
 	border-left:2px solid #051A38;
+}.headerfblike {
+	float: right;
+	margin-top: -35px;
+	margin-right: 4px;
 }
