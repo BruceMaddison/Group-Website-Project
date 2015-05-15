@@ -5,16 +5,18 @@ div.content{
 	height: auto;
 	width: 980px;
 	background-color: rgba(140, 140, 140, 0.5);
-	background-image: url("Content1BG.jpg");
-	margin: 10px 10px 10px 10px;
+	background-image: url("contentTexture.png");
+	margin: 10px;
 	border-radius: 10px;
+    border: solid thin black;
 }
 div.content h2{
     height: 40px;
-	width: 980;
-	background-color: rgba(140, 140, 140, 0.5);
+	width: 400px;
+	background-color: rgba(255, 255, 0, 0.5);
     font-family: Tahoma;
 	text-align: center;
+    margin: auto;
 }
 div.content h3{
     height: 30px;
@@ -51,7 +53,7 @@ h1{
     margin: 10px 10px 10px 10px;
 	border-radius: 10px;
     background-color: rgba(140, 140, 140, 0.5);
-    background-image: url("Content1BG.jpg");
+    background-image: url("contentTexture.png");
     font-family: Tahoma;
 	text-align: center;
 }
