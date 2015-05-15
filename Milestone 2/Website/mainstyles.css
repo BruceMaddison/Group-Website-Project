@@ -24,10 +24,12 @@ header{
 footer{
 	text-align: left;
 	border: thin solid #000000;
-	padding-left: 31px;
+	padding-left: 30px;
 	padding-bottom: 19px;
 	background-color: rgba(0,118,163,0.79);
 	font-size: small;
+	width:970px;
+	margin:auto;
 }
 footer .facebooklikefooter {
 	float: right;
