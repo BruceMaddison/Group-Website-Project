@@ -3,7 +3,8 @@ div.container{
 	width: 1000px;
 	margin: auto;
 	background-color: rgba(255, 255, 255, 0.5);
-    border: thin solid black;
+	border: thin solid black;
+	float: none;
 }
 body{
     text-align: center;
@@ -109,4 +110,13 @@ nav ul li a:hover{
 	float: right;
 	margin-top: -35px;
 	margin-right: 4px;
+}
+a {
+	text-decoration: none;
+	color: #DBA609;
+	-webkit-transition: all 1ms ease-in-out 1ms;
+	-o-transition: all 1ms ease-in-out 1ms;
+	transition: all 1ms ease-in-out 1ms;
+}a:hover {
+	color: #F4F30C;
 }
