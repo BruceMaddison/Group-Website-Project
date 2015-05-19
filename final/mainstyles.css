@@ -1,0 +1,144 @@
+@charset "UTF-8";
+div.container{
+	width: 1000px;
+	margin: auto;
+	background-color: rgba(255, 255, 255, 0.5);
+	border: thin solid black;
+	float: none;
+}
+body{
+    text-align: center;
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+}
+header{
+	border: thin solid black;
+	background-color: rgba(0, 118, 163, 0.5);
+	text-indent: 12px;
+}
+.titleimg{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+footer{
+	text-align: left;
+	border: thin solid #000000;
+	padding-left: 30px;
+	padding-bottom: 19px;
+	background-color: rgba(0,118,163,0.79);
+	font-size: small;
+	width:970px;
+	margin:auto;
+}
+footer .facebooklikefooter {
+	float: right;
+	margin-top: 33px;
+	margin-right: 29px;
+}
+footer .qldgovindeximg {
+	float: right;
+	padding-left: 4px;
+	margin-top: 19px;
+	margin-left: 101px;
+	margin-right: 32px;
+}
+footer .councilimgindex {
+	float: right;
+	margin-left: 1px;
+	margin-top: 10px;
+	margin-right: 30px;
+}
+header .logotitle {
+	float: right;
+	padding-right: 12px;
+	padding-top: 20px;
+	margin-top: -13px;
+}
+header .navfblike {
+	float: right;
+	padding-right: 6px;
+	margin-top: -44px;
+}
+nav {
+    width: 100%;
+    background: #ADADAD;
+    border: 1px solid #ccc;
+    border-right: none;
+}
+ 
+nav ul {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+ 
+nav ul li {
+    list-style: none;
+    float: left;
+    text-align: center;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #ccc;
+    width: 16.6667%; /* fallback for non-calc() browsers */
+    width: calc(100% / 7);
+    box-sizing: border-box;
+}
+nav ul li:first-child {
+    border-left: none;
+}
+nav ul li a {
+    background: clear;
+    color:#000;
+    text-align:center;
+    display: block;
+    text-decoration: none;
+    padding: 4px 0;
+    border-top:2px solid #2C4870;
+	border-right:2px solid #051A38;
+	border-bottom:2px solid #051A38;
+	border-left:2px solid #051A38;
+}
+nav ul li a:hover{
+    background-color: yellow;
+	color:#000;
+	border-top:2px solid #051A38;
+	border-right:2px solid #258AA8;
+	border-bottom:2px solid #258AA8;
+	border-left:2px solid #051A38;
+}.headerfblike {
+	float: right;
+	margin-top: -35px;
+	margin-right: 4px;
+}
+a {
+	text-decoration: none;
+	color: #DBA609;
+	-webkit-transition: all 1ms ease-in-out 1ms;
+	-o-transition: all 1ms ease-in-out 1ms;
+	transition: all 1ms ease-in-out 1ms;
+}a:hover {
+	color: #F4F30C;
+}
+div.dbBox{
+    float: none;
+	height: auto;
+	width: 980px;
+	background-color: rgba(140, 140, 140, 0.5);
+	background-image: url("contentTexture.png");
+	margin: 10px;
+	border-radius: 10px;
+    border: solid thin black;
+}
+div.dbBox p {
+	font-weight: bold;
+}
+div.dbBox h3 {
+	background-color: none;
+}
+input {
+	width: 200px;
+}
+#details{
+	height: 100px;
+}
