@@ -55,15 +55,15 @@
                 <?php 
                     echo "<form id='insert' name='insert' method='post' action='memberInsert.php' enctype='multipart/form-data'>
                         <center><table><tbody>
-                        <tr><td align='right'><label for='username'>Username: </label></td><td><input type='text' name='username' id='username' /></td></tr>
-                        <tr><td align='right'><label for='password'>Password: </label></td><td><input type='password' name='password' id='password' /></td></tr>
-                        <tr><td align='right'><label for='firstName'>Given Name: </label></td><td><input type='text' name='firstName' id='firstName' /></td></tr>
-                        <tr><td align='right'><label for='lastName'>Surname: </label></td><td><input type='text' name='lastName' id='lastName' /></td></tr>
-                        <tr><td align='right'><label for='streetNum'>Street Number: </label></td><td><input type='number' name='streetNum' id='streetNum' /></td></tr>
-                        <tr><td align='right'><label for='streetName'>Street Name: </label></td><td><input type='text' name='streetName' id='streetName' /></td></tr>
-                        <tr><td align='right'><label for='suburb'>Suburb: </label></td><td><input type='text' name='suburb' id='suburb' /></td></tr>
-                        <tr><td align='right'><label for='memPhoneNum'>Phone Number: </label></td><td><input type='text' name='memPhoneNum' id='memPhoneNum' /></td></tr>
-                        <tr><td align='right'><label for='memberEmail'>Email: </label></td><td><input type='text' name='memberEmail' id='memberEmail' /></td></tr>
+                        <tr><td align='right'><label for='username'>Username: </label></td><td><input type='text' name='username' id='username' required/></td></tr>
+                        <tr><td align='right'><label for='password'>Password: </label></td><td><input type='password' name='password' id='password' required/></td></tr>
+                        <tr><td align='right'><label for='firstName'>Given Name: </label></td><td><input type='text' name='firstName' id='firstName' required/></td></tr>
+                        <tr><td align='right'><label for='lastName'>Surname: </label></td><td><input type='text' name='lastName' id='lastName' required/></td></tr>
+                        <tr><td align='right'><label for='streetNum'>Street Number: </label></td><td><input type='number' name='streetNum' id='streetNum' required/></td></tr>
+                        <tr><td align='right'><label for='streetName'>Street Name: </label></td><td><input type='text' name='streetName' id='streetName' required/></td></tr>
+                        <tr><td align='right'><label for='suburb'>Suburb: </label></td><td><input type='text' name='suburb' id='suburb' required/></td></tr>
+                        <tr><td align='right'><label for='memPhoneNum'>Phone Number: </label></td><td><input type='text' name='memPhoneNum' id='memPhoneNum' required/></td></tr>
+                        <tr><td align='right'><label for='memberEmail'>Email: </label></td><td><input type='text' name='memberEmail' id='memberEmail' required/></td></tr>
                         </tbody></table>
                         <input type='submit' name='submit' id='submit' value='Submit' />
                     </form>";
