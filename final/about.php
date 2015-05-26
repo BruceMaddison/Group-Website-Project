@@ -7,7 +7,7 @@
 		session_regenerate_id(true);
 	}
 ?>
-<html>
+<!DOCTYPE HTML><html>
     <head>
         <title>About Us</title>
         <link rel="icon" href="favicon.ico" type="image/x-icon"/>

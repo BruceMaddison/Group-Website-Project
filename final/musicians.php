@@ -10,7 +10,7 @@
     include("dbconnect.php");
     //All php on this page written/repurposed by Christian Thorpe
 ?>
-<html>
+<!DOCTYPE HTML><html>
 <head>
     <title>Musicians</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon"/>
@@ -35,7 +35,6 @@
                 <li><a href="instruments.php" class="linkinstrument">Instruments We Use</a></li>
             </ul>
         </nav>
-        </header>
         <h1 id="musicians">Musicians</h1>
         <?php
 			
