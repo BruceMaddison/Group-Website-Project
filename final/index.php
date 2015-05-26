@@ -66,7 +66,7 @@
                 <strong>2pm Sunday 29 November at C2 (Townsville Civic Theatre)</strong></p>
             </div>
             <h3>Featured Musician</h3>
-            
+            <div>
 			<?php
 				$sql = "SELECT * FROM Artists WHERE FeaturedArtist = 'Y'";
 				foreach ($dbh->query($sql) as $row){
@@ -75,7 +75,7 @@
 					<a href='musicians.php'><img src='$row[ArtistImagePath]' alt='$row[ArtistName]' id='featuredArtist'/></a><br>
 					<p class='maincontent'>$conversion</p>";
 				}
-			?>
+                ?></div>
 			
             <h3>What is Townsviile Music Center?</h3>
             <p class="maincontent">In 1983 the Townsville music centre was established and presented with a $50 dollar cheque from the Townsville City Council. In 2003, 20 years after establishment the Townsville Music Centre relocated their office to the Townsville Civic Theatre building located on Boundry Street Townsville. A number of events are held by the Townsville Music centre on a regular basic and it is always searching for  <a href="membership.php">new members</a> and inspiring musicians. Current or future event information can be found on the <a href="events.php">Events page</a>, while information about the associated musicians can be found on the <a href="musicians.php">Musicians page</a> on this website. <br>

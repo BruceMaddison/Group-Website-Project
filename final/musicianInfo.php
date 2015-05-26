@@ -33,6 +33,7 @@
                         <tr><td align='right'>Email: </td><td><input type='text' name='artistEmail' value='$row[Email]' /></td></tr>
                         <tr><td align='right'>Phone Number:<br></td><td><input type='text' name='artistPhone' value='$row[PhoneNumber]' /></td></tr>
                         <tr><td align='right'>Website:<br></td><td><input type='text' name='artistWebsite' value='$row[Website]' /></td></tr>
+                        <tr><td align='right'>Featured Artist:<br></td><td><input type='checkbox' name='artistFeatured' /></td></tr>
                     </tbody></table></center>";
                 }
             ?>

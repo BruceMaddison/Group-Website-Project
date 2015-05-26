@@ -32,6 +32,13 @@
                 }
             }
             else if ($_REQUEST['submit'] == "Update") {
+                if(isset($_REQUEST[artistFeatured])){
+                    $sql0 = "UPDATE Artists SET FeaturedArtist = ''";
+                    $dbh->exec($sql0);
+                    $sql1 = "UPDATE Artists SET FeaturedArtist = 'Y' WHERE ArtistID = '$_REQUEST[artistID]'";
+                    $dbh->exec($sql1);
+                }
+                
                 $sql = "UPDATE Artists SET ArtistID = '$_REQUEST[artistID]', ArtistName = '$_REQUEST[artistName]', Details = '$_REQUEST[artistDetails]', Description = '$_REQUEST[artistDescription]', Email = '$_REQUEST[artistEmail]', PhoneNumber = '$_REQUEST[artistPhone]', Website = '$_REQUEST[artistWebsite]' WHERE ArtistID = '$_REQUEST[artistID]'";
                 if ($dbh->exec($sql)){
                     echo "Updated database.";
