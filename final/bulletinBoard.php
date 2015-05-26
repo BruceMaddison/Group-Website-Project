@@ -10,7 +10,7 @@
     include("dbconnect.php");
     //All php on this page written/repurposed by Christian Thorpe
 ?>
-<html>
+<!DOCTYPE html><html>
     <head>
         <title>Bulletin Board</title>
         <link rel="icon" href="favicon.ico" type="image/x-icon"/>
@@ -35,7 +35,7 @@
                     <li><a href="instruments.php" class="linkinstrument">Instruments We Use</a></li>
                 </ul>
             </nav>
-			<div class='container'>
+			<div class="container">
             <h1>Bulletin Board</h1>
             <?php
 				
