@@ -24,7 +24,7 @@
 
             if ($_REQUEST['submit'] == "Submit"){
 				echo "$_REQUEST[datePosted]";
-                $sql = "INSERT INTO Bulletin (DatePosted, Title, Details, Email, Facebook, Website) VALUES ('$_REQUEST[datePosted]', '$_REQUEST[bulletinTitle]', '$_REQUEST[details]', '$_REQUEST[email]', '$_REQUEST[facebook]', '$_REQUEST[website]')";
+                $sql = "INSERT INTO Bulletin (DatePosted, Title, Details, Email, Facebook, Website) VALUES (date('now'), '$_REQUEST[bulletinTitle]', '$_REQUEST[details]', '$_REQUEST[email]', '$_REQUEST[facebook]', '$_REQUEST[website]')";
                 echo "<p>Query: " . $sql . "</p>\n<p><strong>"; 
                     if($_REQUEST[bulletinTitle] != ""){
                         if ($dbh->exec($sql)){

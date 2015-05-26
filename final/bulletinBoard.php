@@ -43,7 +43,6 @@
 				if ($_SESSION['loggedIn']) {
 					echo "<div class='container'><form id='insert' name='insert' method='post' action='bulletinInsert.php' enctype='multipart/form-data'>
 						<h2>Insert new post (for a new line, input two ~ symbols):</h2><center><table><tbody>
-						<tr><td align='right'><label for='datePosted'>Date Posted: </label></td><td><input type='text' name='datePosted' id='datePosted' /></td></tr>
 						<tr><td align='right'><label for='bulletinTitle'>Title: </label></td><td><input type='text' name='bulletinTitle' id='bulletinTitle' /></td></tr>
 						<tr><td align='right'><label for='details'>Details: </label></td><td><input type='text' name='details' id='details' /></td></tr>
 						<tr><td align='right'><label for='email'>Email: </label></td><td><input type='text' name='email' id='email' /></td></tr>
@@ -54,7 +53,7 @@
 					</form></div>";
 				}
 				
-                $sql = "SELECT * FROM Bulletin ORDER BY BulletinID DESC";
+                $sql = "SELECT * FROM Bulletin ORDER BY DatePosted DESC";
                 foreach ($dbh->query($sql) as $row){
                     $lineBreaks = str_replace("~~", "<br><br>", "$row[Details]");
 
