@@ -10,7 +10,7 @@
     include("dbconnect.php");
     //All php on this page written/repurposed by Christian Thorpe
 ?>
-<html>
+<!DOCTYPE html><html>
     <head>
         <title>Events</title>
         <link rel="icon" href="favicon.ico" type="image/x-icon"/>
