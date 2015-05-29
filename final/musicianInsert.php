@@ -29,15 +29,27 @@
 			$noApostDesc = str_replace("'", "", "$_REQUEST[artistDescription]");
 
             if ($_REQUEST['submit'] == "Submit"){
-                $sql = "INSERT INTO Artists (ArtistImagePath, ArtistName, Details, Description, Email, PhoneNumber, Website) VALUES ('$targetFile', '$_REQUEST[artistName]', '$noApostDet', '$noApostDesc', '$_REQUEST[artistEmail]', '$_REQUEST[artistPhone]', '$_REQUEST[artistWebsite]')";
+                $sql = "INSERT INTO Artists (ArtistImagePath, ArtistName, Details, Description, Email, PhoneNumber, Website, FeaturedArtist) VALUES ('$targetFile', '$_REQUEST[artistName]', '$noApostDet', '$noApostDesc', '$_REQUEST[artistEmail]', '$_REQUEST[artistPhone]', '$_REQUEST[artistWebsite]', '')";
                 echo "<p>Query: " . $sql . "</p>\n<p><strong>"; 
-                    if($_REQUEST[artistName] != ""){
-                        if ($dbh->exec($sql)){
-                            echo "Inserted $_REQUEST[artistName].";
-                        }
-                    }else{
-                        echo "$_REQUEST[artistName] failed to be inserted.";
+                if($_REQUEST[artistName] != ""){
+                    if ($dbh->exec($sql)){
+                        echo "Inserted $_REQUEST[artistName].";
                     }
+                }else{
+                    echo "$_REQUEST[artistName] failed to be inserted.";
+                }
+                
+                
+                $unsortedGenres  = "$_REQUEST[artistGenres]";
+                $genres = explode(", ", $unsortedGenres);
+                foreach($genres as $gen){
+                    $genreSQL = "SELECT ArtistID FROM Artists WHERE ArtistName = '$_REQUEST[artistName]'";
+                    foreach ($dbh->query($genreSQL) as $genreRow) {
+                        $genreArtistID = $genreRow[ArtistID];
+                    }
+                    $genreInsertSQL = "INSERT INTO genres (ArtistID, Genre) VALUES ('$genreArtistID', '$gen')";   
+                    $dbh->exec($genreInsertSQL);
+                }
             }else{
                 echo "This page did not come from a valid form submission.<br />\n";
             }

@@ -57,18 +57,18 @@
 				<br>
 			</div>
 
-			<div class="content">
+			<div id="drum" class="content">
 				<br>
                 <div class="instumentImg"><img src="images/instruments/drums01.png"  width="210" height="200"/></div>
 				<p>The <b>drum kit</b>, or <b>drum set</b>, is a collection of drums and other percussion instruments set up to be played/struck by a single player.<br><br>
 				The traditional drum kit consists of a mix of drums (classified as classically as membranophones) and idiophones (most significantly cymbals but also including the woodblock and cowbell for example). More recently kits have also included electronic instruments, with both hybrid and entirely electronic kits now in common use.<br><br>
-				A standard modern kit (for a right-handed player), as used in popular music and taught in many music schools, contains:
+				A standard modern kit (for a right-handed player), as used in popular music and taught in many music schools, contains:</p>
 				<ul>
 					<li>A snare drum, mounted on a stand, placed between the player's knees and played with drum sticks (which may include rutes or brushes)</li>
 					<li>A bass drum, played by a pedal operated by the right foot</li>
 					<li>One or more cymbals, played with the sticks</li>
 				</ul>
-				Many drummers extend their kits from this basic pattern, adding more drums, more cymbals, and many other instruments including pitched percussion. In some styles of music particular extensions are normal, for example double bass drums in heavy metal music. On the other extreme but more rarely, some performers omit elements from even the basic setup, also dependent on the style of music and individual preferences.</p>
+                <p>Many drummers extend their kits from this basic pattern, adding more drums, more cymbals, and many other instruments including pitched percussion. In some styles of music particular extensions are normal, for example double bass drums in heavy metal music. On the other extreme but more rarely, some performers omit elements from even the basic setup, also dependent on the style of music and individual preferences.</p>
 				<br>
 			</div>
 

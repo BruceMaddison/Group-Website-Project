@@ -20,8 +20,9 @@
     <div class="container">
         <h1>Results</h1>
         <?php
+            $md5Password = md5($_REQUEST[password]);
             if ($_REQUEST['submit'] == "Submit"){
-                $sql = "INSERT INTO Members (Username, Password, FirstName, LastName, MemberType, MemberStreetNum, MemberStreetName, MemberSuburb, MemberPhoneNum, MemberEmail) VALUES ('$_REQUEST[username]', '$_REQUEST[password]', '$_REQUEST[firstName]', '$_REQUEST[lastName]', 'member', '$_REQUEST[streetNum]', '$_REQUEST[streetName]', '$_REQUEST[suburb]', '$_REQUEST[memPhoneNum]', '$_REQUEST[memberEmail]')";
+                $sql = "INSERT INTO Members (Username, Password, FirstName, LastName, MemberType, MemberStreetNum, MemberStreetName, MemberSuburb, MemberPhoneNum, MemberEmail) VALUES ('$_REQUEST[username]', '$md5Password', '$_REQUEST[firstName]', '$_REQUEST[lastName]', 'user', '$_REQUEST[streetNum]', '$_REQUEST[streetName]', '$_REQUEST[suburb]', '$_REQUEST[memPhoneNum]', '$_REQUEST[memberEmail]')";
                 if($_REQUEST[username] != ""){
                     if ($dbh->exec($sql)){
                         echo "Inserted $_REQUEST[firstName].";

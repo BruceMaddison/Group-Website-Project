@@ -41,55 +41,63 @@
 			<?php
 				if (!$_SESSION['loggedIn']){
 					echo "<h2 class='becomembrindex'>
-						<a href='membership.php'>Become a member</a> or <a href='login.php'>Log In</a> and recieve up to <strong>50% off tickets, <br>tickets purchased at the <a href='https://au.patronbase.com/_TVCC/Productions'>TicketShop</a></strong>
-						<a href='https://au.patronbase.com/_TVCC/Productions'target='_blank'><img src='images/index/TShop300web.jpg' alt='Ticket Shop, Click to purchase tickets'  width='300' height='55' class='ticketshopimg'/></a></h2>";
+						<a href='membership.php'>Become a member</a> or <a href='login.php'>Log In</a> and recieve up to <strong>50% off tickets, <br>tickets purchased at the <a href='https://au.patronbase.com/_TVCC/Productions'>TicketShop</a></strong></h2>";
 				} else {
 					echo "<h2 class='becomembrindex'>
-						<a href='logout.php'>Log Out</a><br>
-						<a href='https://au.patronbase.com/_TVCC/Productions'target='_blank'><img src='images/index/TShop300web.jpg' alt='Ticket Shop, Click to purchase tickets'  width='300' height='55' class='ticketshopimg'/></a></h2>";
+						<a href='logout.php'>Log Out</a></h2>";
 				}
 			?>
 			
             
 			
-			<div>
-                <h3>Upcoming Events</h3>
-                <div class="contentheading1">Aviva String Quartet</div>
-                <a href="events.php"><img src="images/index/AVIVA-GROUP300.jpg" alt="Avia String Quartet" width="360" height="240" id="aviaStringImg" title="Avia String Quartet"/></a>
-                <p class="maincontent">The superb foursome return with their final concert for 2015, bringing their signature style 
-                of classical and modern music to the masses in their own fresh and entertaining style.     
-                Featuring:<br>
-                <strong>Caroline Lloyd-Doolan on violin</strong><br> 
-                <strong>Susan Fraser on violin</strong><br>   
-                <strong>Jessica Winton on viola</strong><br>   
-                <strong>Ivy Wu on cello</strong><br><br>   
-                <strong>2pm Sunday 29 November at C2 (Townsville Civic Theatre)</strong></p>
-            </div>
-            <h3>Featured Musician</h3>
-            <div>
-			<?php
-				$sql = "SELECT * FROM Artists WHERE FeaturedArtist = 'Y'";
-				foreach ($dbh->query($sql) as $row){
-					$conversion = str_replace('~', '<br>', $row[Details]);
-					echo "<div class='contentheading2'>$row[ArtistName]</div>
-					<a href='musicians.php'><img src='$row[ArtistImagePath]' alt='$row[ArtistName]' id='featuredArtist'/></a><br>
-					<p class='maincontent'>$conversion</p>";
-				}
-                ?></div>
+				<?php
+					$sql = "SELECT * FROM Events";
+					$lowestDate = "2020-01-01";
+					foreach ($dbh->query($sql) as $row){
+						if ($row[EventDate] < $lowestDate){
+							$lowestDate = $row[EventDate];
+						}
+					}
+					$eventSQL = "SELECT * FROM Events WHERE EventDate = '$lowestDate'";
+					foreach ($dbh->query($eventSQL) as $eventRow){
+							echo "<div class='maincontent'><h3>Upcoming Events</h3>
+								<img src='$eventRow[ImagePath]' alt='eventRow[Title]' id='featuredEvent'/>
+								<table>
+									<tr><td><h2 class='contentheading2'><a href = 'events.php'>$eventRow[Title]</a></h2></td></tr>
+									<tr><td><p>$eventRow[Details]</p></td></tr>
+								</table>
+							</div>";
+					}
+				?>
+				
+				<?php
+					$sql = "SELECT * FROM Artists WHERE FeaturedArtist = 'Y'";
+					foreach ($dbh->query($sql) as $row){
+						echo "<div class='maincontent'><h3>Featured Musician</h3>
+								<img src='$row[ArtistImagePath]' alt='Artists' id='featuredArtist'/>
+								<table>
+									<tr><td><h2 class='contentheading2'><a href = 'musicians.php'>$row[ArtistName]</a></h2></td></tr>
+									<tr><td><p>$row[Details]</p></td></tr>
+								</table>
+							</div>";
+					}
+				?>
+            
 			
-            <h3>What is Townsviile Music Center?</h3>
-            <p class="maincontent">In 1983 the Townsville music centre was established and presented with a $50 dollar cheque from the Townsville City Council. In 2003, 20 years after establishment the Townsville Music Centre relocated their office to the Townsville Civic Theatre building located on Boundry Street Townsville. A number of events are held by the Townsville Music centre on a regular basic and it is always searching for  <a href="membership.php">new members</a> and inspiring musicians. Current or future event information can be found on the <a href="events.php">Events page</a>, while information about the associated musicians can be found on the <a href="musicians.php">Musicians page</a> on this website. <br>
-            <br>Further information about the Townsville Music Centre can be found in the book titled "Townsville Community Music Centre: some memories of the first 25 years" by Jean Dartnall, which are available from the Main office. For any other questions that may arise feel free to  <a href="#">contact</a> the office.</p>
-
-            <footer>
-                <a href="https://www.facebook.com/pages/Townsville-Community-Music-Centre/159636880763534"><img src="images/facebook_like.png" alt="Like Us on Facebook" class="facebooklikefooter"></a>
-                <img src="images/index/TCC83100.png" alt="" width="83" height="100" class="councilimgindex"/>
-                <img src="images/index/GCBF15091.gif" alt="" width="150" height="92" class="qldgovindeximg"/>
-                <br>Contact<br>
-                Phone: 07 4724 2086 <br> Mobile: 04 0225 5182 <br>
-                Email: <a href="mailto:admin@townsvillemusic.org.au">admin@townsvillemusic.org.au</a><br><br>
-                &copy; Townsville Community Business Centre
-            </footer>
-        </div>
+            <div class="maincontent"><h3>What is Townsviile Music Center?</h3><br>
+				<p>In 1983 the Townsville music centre was established and presented with a $50 dollar cheque from the Townsville City Council. In 2003, 20 years after establishment the Townsville Music Centre relocated their office to the Townsville Civic Theatre building located on Boundry Street Townsville. A number of events are held by the Townsville Music centre on a regular basic and it is always searching for  <a href="membership.php">new members</a> and inspiring musicians. Current or future event information can be found on the <a href="events.php">Events page</a>, while information about the associated musicians can be found on the <a href="musicians.php">Musicians page</a> on this website.<br><br>
+				Further information about the Townsville Music Centre can be found in the book titled "Townsville Community Music Centre: some memories of the first 25 years" by Jean Dartnall, which are available from the Main office. For any other questions that may arise feel free to  <a href="#">contact</a> the office.</p>
+			</div>
+			
+		</div>
+		<footer>
+			<a href="https://www.facebook.com/pages/Townsville-Community-Music-Centre/159636880763534"><img src="images/facebook_like.png" alt="Like Us on Facebook" class="facebooklikefooter"></a>
+			<img src="images/index/TCC83100.png" alt="" width="83" height="100" class="councilimgindex"/>
+			<img src="images/index/GCBF15091.gif" alt="" width="150" height="92" class="qldgovindeximg"/>
+			<br>Contact<br>
+			Phone: 07 4724 2086 <br> Mobile: 04 0225 5182 <br>
+			Email: <a href="mailto:admin@townsvillemusic.org.au">admin@townsvillemusic.org.au</a><br><br>
+			&copy; Townsville Community Business Centre
+		</footer>
     </body>
 </html>

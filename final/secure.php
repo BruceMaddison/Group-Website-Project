@@ -8,7 +8,7 @@
 	
 	$_SESSION['lastRegeneration'] = 0;
 	$_SESSION['username'] = $_REQUEST['formUsername'];
-	$_SESSION['password'] = $_REQUEST['formPassword'];
+	$_SESSION['password'] = md5($_REQUEST['formPassword']);
 ?>
 <html>
 	<head>

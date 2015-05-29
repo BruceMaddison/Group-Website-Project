@@ -24,7 +24,7 @@
             move_uploaded_file($_FILES["eventImage"]["tmp_name"], $targetFile);
             
             if ($_REQUEST['submit'] == "Submit"){
-                $sql = "INSERT INTO Events (ImagePath, Title, Subtitle, Details, Time, Day, Date, Place, BookingLink) VALUES ('$targetFile', '$_REQUEST[title]', '$_REQUEST[subtitle]', '$_REQUEST[details]', '$_REQUEST[time]', '$_REQUEST[day]', '$_REQUEST[date]', '$_REQUEST[place]', '$_REQUEST[bookingLink]')";
+                $sql = "INSERT INTO Events (ImagePath, Title, Subtitle, Details, Time, Day, EventDate, Place, BookingLink) VALUES ('$targetFile', '$_REQUEST[title]', '$_REQUEST[subtitle]', '$_REQUEST[details]', '$_REQUEST[time]', '$_REQUEST[day]', '$_REQUEST[date]', '$_REQUEST[place]', '$_REQUEST[bookingLink]')";
                 echo "<p>Query: " . $sql . "</p>\n<p><strong>"; 
                     if($_REQUEST[title] != ""){
                         if ($dbh->exec($sql)){

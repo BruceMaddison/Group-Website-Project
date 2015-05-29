@@ -4,7 +4,9 @@ div.container{
 	margin: auto;
 	background-color: rgba(255, 255, 255, 0.5);
 	border: thin solid black;
-	float: none;
+	float: center;
+	display: inline-block;
+	padding-bottom: 10px;
 }
 body{
     text-align: center;
@@ -129,6 +131,18 @@ div.dbBox{
 	margin: 10px;
 	border-radius: 10px;
     border: solid thin black;
+}
+p{
+    color: white;
+}
+table{
+    color: white;
+}
+div#drum ul{
+    color: white;
+    text-align: left;
+    width: 800;
+    margin: auto;
 }
 div.dbBox p {
     font-family: arial;

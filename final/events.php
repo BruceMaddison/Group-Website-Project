@@ -10,7 +10,7 @@
     include("dbconnect.php");
     //All php on this page written/repurposed by Christian Thorpe
 ?>
-<!DOCTYPE html><html>
+<html>
     <head>
         <title>Events</title>
         <link rel="icon" href="favicon.ico" type="image/x-icon"/>
@@ -39,31 +39,37 @@
             <?php
 				$sql = "SELECT * FROM Events";
                 foreach ($dbh->query($sql) as $row){
-                    echo "<div class='events'><table><tr><td><img src=$row[ImagePath]></td>";
-                    echo "<td><h2>$row[Title]</h2><br><p>$row[Subtitle]</p><br><p>$row[Details]</p></td></tr><tr><td><p>$row[Time] $row[Day] $row[Date] at $row[Place]</p></td>";
-                    if ($row[BookingLink] != ""){
-                        echo "<td><a href='$row[BookingLink]'><img src=images/ticketshop.jpg></a></td>";
-                    }
-                    echo "</tr></table></div>";
-                 }
+                    if($row[EventDate] > date()){
+                        echo "<div class='events'><table><tr><td><img src=$row[ImagePath]></td>";
+                        echo "<td><h2>$row[Title]</h2><br><p>$row[Subtitle]</p><br><p>$row[Details]</p></td></tr><tr><td><p>$row[Time] $row[Day] $row[EventDate] at <br>$row[Place]</p></td>";
+                        if ($row[BookingLink] != ""){
+                            echo "<td><a href='$row[BookingLink]'><img src=images/ticketshop.jpg></a></td>";
+                        }
+                        echo "</tr></table></div>";
+                   }
+                }
 
-                if ($_SESSION['loggedIn']){
+                $memberTypeSQL = "SELECT MemberType FROM Members WHERE Username = '$_SESSION[username]'";
+                foreach($dbh->query($memberTypeSQL) as $row){
+                    $loggedMemberType = $row[MemberType];
+                }
+                if ($_SESSION['loggedIn'] && ($loggedMemberType == 'admin')){
                 echo "<div class='container'>
-                <form id='insert' name='insert' method='post' action='eventInsert.php' enctype='multipart/form-data'>
-                    <h2>Create new event:</h2><center><table><tbody>
-                    <tr><td align='right'><label for='eventImage'>Display Image: </label></td><td><input type='file' name='eventImage' id='eventImage' /></td></tr>
-                    <tr><td align='right'><label for='title'>Title: </label></td><td><input type='text' name='title' id='title' /></td></tr>
-                    <tr><td align='right'><label for='subtitle'>Subtitle: </label></td><td><input type='text' name='subtitle' id='subtitle' /></td></tr>
-                    <tr><td align='right'><label for='details'>Details: </label></td><td><input type='text' name='details' id='details' /></td></tr>
-                    <tr><td align='right'><label for='time'>Time: </label></td><td><input type='text' name='time' id='time' /></td></tr>
-                    <tr><td align='right'><label for='day'>Day: </label></td><td><input type='text' name='day' id='day' /></td></tr>
-                    <tr><td align='right'><label for='date'>Date: </label></td><td><input type='text' name='date' id='date'/></td></tr>
-                    <tr><td align='right'><label for='place'>Where: </label></td><td><input type='text' name='place' id='place' /></td></tr>
-                    <tr><td align='right'><label for='bookingLink'>Booking Link: </label></td><td><input type='text' name='bookingLink' id='bookingLink' /></td></tr>
-                    </tbody></table>
-                    <input type='submit' name='submit' id='submit' value='Submit' />
-                </form>
-                </div>";
+                    <form id='insert' name='insert' method='post' action='eventInsert.php' enctype='multipart/form-data'>
+                        <h2>Create new event:</h2><center><table><tbody>
+                        <tr><td align='right'><label for='eventImage'>Display Image: </label></td><td><input type='file' name='eventImage' id='eventImage' /></td></tr>
+                        <tr><td align='right'><label for='title'>Title: </label></td><td><input type='text' name='title' id='title' /></td></tr>
+                        <tr><td align='right'><label for='subtitle'>Subtitle: </label></td><td><input type='text' name='subtitle' id='subtitle' /></td></tr>
+                        <tr><td align='right'><label for='details'>Details: </label></td><td><input type='text' name='details' id='details' /></td></tr>
+                        <tr><td align='right'><label for='time'>Time: </label></td><td><input type='text' name='time' id='time' /></td></tr>
+                        <tr><td align='right'><label for='day'>Day: </label></td><td><input type='text' name='day' id='day' /></td></tr>
+                        <tr><td align='right'><label for='date'>Date (YYYY-MM-DD): </label></td><td><input type='text' name='date' id='date'/></td></tr>
+                        <tr><td align='right'><label for='place'>Where: </label></td><td><input type='text' name='place' id='place' /></td></tr>
+                        <tr><td align='right'><label for='bookingLink'>Booking Link: </label></td><td><input type='text' name='bookingLink' id='bookingLink' /></td></tr>
+                        </tbody></table>
+                        <input type='submit' name='submit' id='submit' value='Submit' />
+                    </form>
+                    </div>";
                 }
             ?>
             <footer>

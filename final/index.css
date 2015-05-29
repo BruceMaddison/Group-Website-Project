@@ -9,30 +9,14 @@ h2 {
 	padding-right: 10px;
 	padding-left: 25px;
 	float: none;
-	text-align: left;
+	text-align: center;
 }
 .ticketshopimg {
 	float: right;
 	margin-top: -27px;
 }
-.contentheading1 {
-	background-color: #4F4F4F;
-	width: 250px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
-	letter-spacing: 5px;
-	text-transform: capitalize;
-	padding-left: 10px;
-	padding-right: 10px;
-	border: medium solid #000000;
-	font-weight: bold;
-	font-size: small;
-	margin-bottom: -56px;
-	margin-left: 119px;
-	border-radius: 10px;
-}
 .contentheading2 {
+	float: center;
 	background-color: #4F4F4F;
 	width: 500px;
 	padding-top: 10px;
@@ -45,9 +29,8 @@ h2 {
 	border: medium solid #000000;
 	font-weight: bold;
 	font-size: small;
-	margin-bottom: -66px;
 	border-radius: 10px;
-	margin-left: 324px;
+	text-align: center;
 }
 h4 {
 	width: 250px;
@@ -80,36 +63,25 @@ h3 {
 	border: medium solid #41A7F1;
 	margin-top: 34px;
 }
-#aviaStringImg {
-	float: right;
-	margin-top: 8px;
-	border: thin solid #020202;
-	margin-left: 30px;
-	margin-right: 21px;
-}
-
 .maincontent {
+	float: left;
+	width: 970px;
 	text-align: center;
-	padding-left: 53px;
+	padding-left: 30px;
+	padding-bottom: 10px;
+	padding-top: 10px;
 	background-color: rgba(140, 140, 140, 0.5);
 	background-image: url("contentTexture.png");
-	margin-left: 10px;
-	margin-right: 10px;
-	padding-top: 57px;
-	padding-bottom: 11px;
-	line-height: 1;
-	line-height: 20px;
-	margin-top: 4px;
 	border-radius: 10px;
 	border: thin solid #CBA400;
 	font-family: arial;
-	padding-right: 35px;
 	font-size: medium;
+	display: inline-block;
+	margin-bottom: 10px;
 }
-#featuredArtist {
+.maincontent img {
+	width: 200px;
+	height: 150px;
 	float: left;
-	padding-top: 22px;
-    padding-left: 12px;
-	width: 18%;
-	height: 10%;
+	padding-right: 10px;
 }

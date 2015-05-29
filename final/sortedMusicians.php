@@ -50,30 +50,35 @@
         </form>
         
         <?php
-			$memberTypeSQL = "SELECT MemberType FROM Members WHERE Username = '$_SESSION[username]'";
-            foreach($dbh->query($memberTypeSQL) as $row2){
-                $loggedMemberType = $row2[MemberType];
+            $memberTypeSQL = "SELECT MemberType FROM Members WHERE Username = '$_SESSION[username]'";
+            foreach($dbh->query($memberTypeSQL) as $row4){
+                $loggedMemberType = $row4[MemberType];
             }
-			$sql = "SELECT * FROM Artists";
-            foreach ($dbh->query($sql) as $row){
-                echo "<div class='dbBox'><h2>$row[ArtistName]</h2><img src=$row[ArtistImagePath]>";
-                
-				if ($_SESSION['loggedIn'] && ($loggedMemberType == 'admin')){
-                    echo "<a href = 'musicianInfo.php?tag=$row[ArtistID]'><h3>EDIT</h3></a>";
-                }
+
+            $sql2 = "SELECT artistID FROM genres WHERE Genre = '$_GET[type]'";
+            foreach ($dbh->query($sql2) as $row2) {
+                $sql3 = "SELECT * FROM Artists WHERE ArtistID='$row2[artistID]'";
+                foreach ($dbh->query($sql3) as $row3) {
+                    echo "<div class='dbBox'><h2>$row3[ArtistName]</h2><img src=$row3[ArtistImagePath]>";
 				
-				echo "<p><br>$row[Details]</p><br><p>$row[Description]</p><table><tr><td colspan='2'><h3>For more information or bookings:</h3></td></tr>";
-                if ($row[Email] != ""){    
-                    echo "<tr><td>Email: </td><td><a href='mailto:$row[Email]'>$row[Email]</a></td></tr>";
+                    if ($_SESSION['loggedIn'] && ($loggedMemberType == 'admin')){
+                        echo "<a href = 'musicianInfo.php?tag=$row3[ArtistID]'><h3>EDIT</h3></a>";
+                    }
+
+                    echo "<p><br>$row3[Details]</p><br><p>$row3[Description]</p><table><tr><td colspan='2'><h3>For more information or bookings:</h3></td></tr>";
+                    if ($row3[Email] != ""){    
+                        echo "<tr><td>Email: </td><td><a href='mailto:$row3[Email]'>$row3[Email]</a></td></tr>";
+                    }
+                    if ($row3[PhoneNumber] != null){ 
+                        echo "<tr><td>Phone: </td><td>$row3[PhoneNumber]</td></tr>";
+                    }
+                    if ($row3[Website] != ""){ 
+                        echo "<tr><td>Website: </td><td><a href='mailto:$row3[Website]'>$row3[Website]</td></tr>";
+                    }
+                    echo "</table></div>";
                 }
-                if ($row[PhoneNumber] != null){ 
-                    echo "<tr><td>Phone: </td><td>$row[PhoneNumber]</td></tr>";
-                }
-                if ($row[Website] != ""){ 
-                    echo "<tr><td>Website: </td><td><a href='mailto:$row[Website]'>$row[Website]</td></tr>";
-                }
-                echo "</table></div>";
             }
+
 
             if ($_SESSION['loggedIn'] && ($loggedMemberType == 'admin' || $loggedMemberType == 'member')){
                 echo "<div class='container'>

@@ -39,7 +39,26 @@
                     $dbh->exec($sql1);
                 }
                 
-                $sql = "UPDATE Artists SET ArtistID = '$_REQUEST[artistID]', ArtistName = '$_REQUEST[artistName]', Details = '$_REQUEST[artistDetails]', Description = '$_REQUEST[artistDescription]', Email = '$_REQUEST[artistEmail]', PhoneNumber = '$_REQUEST[artistPhone]', Website = '$_REQUEST[artistWebsite]' WHERE ArtistID = '$_REQUEST[artistID]'";
+                $targetFile = "images/musicians/" . basename($_FILES["profImage"]["name"]);
+                move_uploaded_file($_FILES["profImage"]["tmp_name"], $targetFile);
+
+                $noApostDet = str_replace("'", "", "$_REQUEST[artistDetails]");
+                $noApostDesc = str_replace("'", "", "$_REQUEST[artistDescription]");
+                
+                $sql = "UPDATE Artists SET ArtistID = '$_REQUEST[artistID]', ArtistImagePath = '$_REQUEST[artistPath]', ArtistName = '$_REQUEST[artistName]', Details = '$_REQUEST[artistDetails]', Description = '$_REQUEST[artistDescription]', Email = '$_REQUEST[artistEmail]', PhoneNumber = '$_REQUEST[artistPhone]', Website = '$_REQUEST[artistWebsite]' WHERE ArtistID = '$_REQUEST[artistID]'";
+                
+                $dbh->exec("DELETE FROM genres WHERE artistID = '$_REQUEST[artistID]'");
+                $unsortedGenres  = "$_REQUEST[artistGenres]";
+                $genres = explode(", ", $unsortedGenres);
+                foreach($genres as $gen){
+                    $genreSQL = "SELECT ArtistID FROM Artists WHERE ArtistName = '$_REQUEST[artistName]'";
+                    foreach ($dbh->query($genreSQL) as $genreRow) {
+                        $genreArtistID = $genreRow[ArtistID];
+                    }
+                    $genreInsertSQL = "INSERT INTO genres (ArtistID, Genre) VALUES ('$genreArtistID', '$gen')";   
+                    $dbh->exec($genreInsertSQL);
+                }
+                
                 if ($dbh->exec($sql)){
                     echo "Updated database.";
                     echo "<p><a href = 'musicianInfo.php?tag=$_REQUEST[artistID]'>Return</a></p>";

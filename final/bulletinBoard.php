@@ -40,7 +40,11 @@
             <?php
 				
                 
-				if ($_SESSION['loggedIn']) {
+				$memberTypeSQL = "SELECT MemberType FROM Members WHERE Username = '$_SESSION[username]'";
+                foreach($dbh->query($memberTypeSQL) as $row){
+                    $loggedMemberType = $row[MemberType];
+                }
+                if ($_SESSION['loggedIn']){
 					echo "<div class='container'><form id='insert' name='insert' method='post' action='bulletinInsert.php' enctype='multipart/form-data'>
 						<h2>Insert new post (for a new line, input two ~ symbols):</h2><center><table><tbody>
 						<tr><td align='right'><label for='bulletinTitle'>Title: </label></td><td><input type='text' name='bulletinTitle' id='bulletinTitle' /></td></tr>
@@ -54,20 +58,23 @@
 				}
 				
                 $sql = "SELECT * FROM Bulletin ORDER BY DatePosted DESC";
+                $dateComparitor = time() - (75 * 24 * 60 * 60);
                 foreach ($dbh->query($sql) as $row){
-                    $lineBreaks = str_replace("~~", "<br><br>", "$row[Details]");
+                    if($row[DatePosted] > date("Y-m-d", $dateComparitor)){
+                        $lineBreaks = str_replace("~~", "<br><br>", "$row[Details]");
 
-                    echo "<div class='dbBox'><h4>$row[DatePosted]</h4><h2>$row[Title]</h2><br><p><b>$lineBreaks</b></p><br><br>";
-                    if ($row[Email] != ""){    
-                        echo "<a href='mailto:$row[Email]'>$row[Email]</a><br><br>";
+                        echo "<div class='dbBox'><h4>$row[DatePosted]</h4><h2>$row[Title]</h2><br><p><b>$lineBreaks</b></p><br><br>";
+                        if ($row[Email] != ""){    
+                            echo "<a href='mailto:$row[Email]'>$row[Email]</a><br><br>";
+                        }
+                        if ($row[Facebook] != ""){ 
+                            echo "<a href='$row[Facebook]'>Facebook Link</a><br><br>";
+                        }
+                        if ($row[Website] != ""){ 
+                            echo "<tr><td>Website: </td><td><a href='$row[Website]'>$row[Website]</a></td></tr><br>";
+                        }
+                        echo "</div>";
                     }
-                    if ($row[Facebook] != ""){ 
-                        echo "<a href='$row[Facebook]'>Facebook Link</a><br><br>";
-                    }
-                    if ($row[Website] != ""){ 
-                        echo "<tr><td>Website: </td><td><a href='$row[Website]'>$row[Website]</a></td></tr><br>";
-                    }
-                    echo "</div>";
                 }
 				echo "</div><br><br>";
 				
